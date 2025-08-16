@@ -1,13 +1,21 @@
 package library.model;
 
-public class DVD extends Item {
-    private int duration;
+import java.util.ArrayList;
 
-    public void setDuration(int duration) {
-        this.duration = duration;
+public class DVD {
+    private ArrayList<ArrayList<Object>> DVDsList = new ArrayList<>();
+
+    public ArrayList<ArrayList<Object>> getDVDsList() {
+        return DVDsList;
     }
 
-    public int getDuration() {
-        return duration;
+    public void setDVD(int id, String title, int year, boolean loaned, int duration) {
+        ArrayList<Object> DVD = new ArrayList<>();
+        DVD.add(id);
+        DVD.add(title);
+        DVD.add(year);
+        DVD.add(loaned);
+        DVD.add(duration);
+        this.DVDsList.add(DVD);
     }
 }

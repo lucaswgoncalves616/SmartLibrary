@@ -1,22 +1,22 @@
 package library.model;
 
-public class Book extends Item{
-    private String author;
-    private int pages;
+import java.util.ArrayList;
 
-    public void setAuthor(String author) {
-        this.author = author;
+public class Book {
+    private ArrayList<ArrayList<Object>> booksList = new ArrayList<>();
+
+    public ArrayList<ArrayList<Object>> getBooksList() {
+        return booksList;
     }
 
-    public void setPages(int pages) {
-        this.pages = pages;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public int getPages() {
-        return pages;
+    public void setBook(int id, String title, int year, boolean loaned, String author, int pages) {
+        ArrayList<Object> book = new ArrayList<>();
+        book.add(id);
+        book.add(title);
+        book.add(year);
+        book.add(loaned);
+        book.add(author);
+        book.add(pages);
+        this.booksList.add(book);
     }
 }

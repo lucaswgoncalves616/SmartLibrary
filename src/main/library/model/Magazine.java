@@ -1,13 +1,21 @@
 package library.model;
 
-public class Magazine {
-    private int edition;
+import java.util.ArrayList;
 
-    public void setEdition(int edition) {
-        this.edition = edition;
+public class Magazine {
+    private ArrayList<ArrayList<Object>> magazinesList = new ArrayList<>();
+
+    public ArrayList<ArrayList<Object>> getMagazinesList() {
+        return magazinesList;
     }
 
-    public int getEdition() {
-        return edition;
+    public void setMagazine(int id, String title, int year, boolean loaned, String edition) {
+        ArrayList<Object> magazine = new ArrayList<>();
+        magazine.add(id);
+        magazine.add(title);
+        magazine.add(year);
+        magazine.add(loaned);
+        magazine.add(edition);
+        this.magazinesList.add(magazine);
     }
 }
