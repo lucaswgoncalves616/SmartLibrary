@@ -1,12 +1,12 @@
 package library.model;
 
 public class Item {
-    private String id;
-    private String title;
-    private int year;
-    private boolean loaned;
+    protected int id;
+    protected String title;
+    protected int year;
+    protected boolean loaned;
 
-    Item(String id, String title, int year, boolean loaned) {
+    Item(int id, String title, int year, boolean loaned) {
         this.id = id;
         this.title = title;
         this.year = year;
@@ -21,7 +21,7 @@ public class Item {
                 " Emprestado: " + this.loaned;
     }
 
-    public String getId() {
+    public int getId() {
         return this.id;
     }
 

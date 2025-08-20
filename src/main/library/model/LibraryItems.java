@@ -1,16 +1,17 @@
 package library.model;
 
+import java.util.ArrayList;
+
 public class LibraryItems {
-    private Item[] items;
+    private ArrayList<Item> items = new ArrayList<Item>();
     private int numOfItems;
 
     public LibraryItems() {
-        items = new Item[5];
         numOfItems = 0;
     }
 
     public void registerNewItem(Item item) {
-        items[numOfItems++] = item;
+        items.add(item);
     }
 
     public void showInfo() {
@@ -18,5 +19,4 @@ public class LibraryItems {
             System.out.println(item);
         }
     }
-
 }

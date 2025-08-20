@@ -1,9 +1,9 @@
 package library.model;
 
 public class Magazine extends Item{
-        private int edition;
+        protected int edition;
 
-        public Magazine(String id, String title, int year, boolean loaned, int edition) {
+        public Magazine(int id, String title, int year, boolean loaned, int edition) {
             super(id, title, year, loaned);
             this.edition = edition;
         }

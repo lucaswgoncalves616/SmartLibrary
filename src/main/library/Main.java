@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String id = "1";
+        int id = 1;
         String title = "50 Tons";
         int year = 2017;
         boolean loaned = false;
@@ -17,7 +17,7 @@ public class Main {
         Book newBook = new Book(id, title, year, loaned, author, pages);
         LibraryItems library = new LibraryItems();
 
-        library.registerNewItem(newBook);
+        library.registerNewItem(newBook.registerNewBook());
         library.showInfo();
 
     }
