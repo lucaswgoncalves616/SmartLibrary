@@ -7,21 +7,18 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        Book books = new Book();
-        Magazine magazines = new Magazine();
-        DVD dvds = new DVD();
+        String id = "1";
+        String title = "50 Tons";
+        int year = 2017;
+        boolean loaned = false;
+        String author = "E L James";
+        int pages = 340;
 
-        books.setBook(1, "50 tons", 2017, true, "E L James", 340);
-        magazines.setMagazine(2, "Playboy", 2006, true, "Nyvi Estephan");
-        dvds.setDVD(3, "Memento", 1996, true, 340);
+        Book newBook = new Book(id, title, year, loaned, author, pages);
+        LibraryItems library = new LibraryItems();
 
-        System.out.println("Livros: ");
-        System.out.println(books.getBooksList());
+        library.registerNewItem(newBook);
+        library.showInfo();
 
-        System.out.println("Revistas: ");
-        System.out.println(magazines.getMagazinesList());
-
-        System.out.println("DVDs: ");
-        System.out.println(dvds.getDVDsList());
     }
 }

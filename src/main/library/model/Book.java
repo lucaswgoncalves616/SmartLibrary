@@ -1,22 +1,21 @@
 package library.model;
 
-import java.util.ArrayList;
 
-public class Book {
-    private ArrayList<ArrayList<Object>> booksList = new ArrayList<>();
+public class Book extends Item{
+    private String author;
+    private int pages;
 
-    public ArrayList<ArrayList<Object>> getBooksList() {
-        return booksList;
+    public Book(String id, String title, int year, boolean loaned, String author, int pages) {
+        super(id, title, year, loaned);
+        this.author = author;
+        this.pages = pages;
     }
 
-    public void setBook(int id, String title, int year, boolean loaned, String author, int pages) {
-        ArrayList<Object> book = new ArrayList<>();
-        book.add(id);
-        book.add(title);
-        book.add(year);
-        book.add(loaned);
-        book.add(author);
-        book.add(pages);
-        this.booksList.add(book);
+    public String getAuthor() {
+        return this.author;
+    }
+
+    public int getPages() {
+        return this.pages;
     }
 }
