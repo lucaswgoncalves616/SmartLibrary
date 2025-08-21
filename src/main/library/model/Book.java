@@ -24,35 +24,46 @@ public class Book extends Item{
         return this.pages;
     }
 
-    Book book = new Book(id, title, year, loaned, author, pages);
+    public static Book registerNewBook() {
+        Scanner sc = new Scanner(System.in);
 
-    public Book registerNewBook(){
+        int id = 1;
+        String title = "50 Tons";
+        int year = 2017;
+        boolean loaned = false;
+        String author = "E L James";
+        int pages = 340;
+
+        Book book = new Book(id, title, year, loaned, author, pages);
+
         System.out.println("Vamos adicionar um livro");
 
+        String response = sc.nextLine();
         while(response.equalsIgnoreCase("sim")) {
-            this.id++;
+            book.id++;
 
             System.out.println("Digite o nome do livro: ");
-            this.title = sc.nextLine();
+            book.title = sc.nextLine();
 
             System.out.println("Digite o ano do livro: ");
-            this.year = sc.nextInt();
+            book.year = sc.nextInt();
             sc.nextLine();
 
-            this.loaned = false;
+            book.loaned = false;
 
             System.out.println("Digite o autor do livro: ");
-            this.author = sc.nextLine();
+            book.author = sc.nextLine();
 
             System.out.println("Quantas páginas tem o livro? ");
-            this.pages = sc.nextInt();
+            book.pages = sc.nextInt();
             sc.nextLine();
 
-            book = new Book(id, title, year, loaned, author, pages);
+            //book = new Book(id, title, year, loaned, author, pages);
 
             System.out.println("Deseja adicionar outro livro? ");
             response = sc.nextLine();
         }
         return book;
     }
+
 }
