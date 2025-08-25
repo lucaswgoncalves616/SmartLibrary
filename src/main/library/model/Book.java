@@ -27,16 +27,16 @@ public class Book extends Item{
     public static Book registerNewBook() {
         Scanner sc = new Scanner(System.in);
 
-        int id = 1;
-        String title = "50 Tons";
-        int year = 2017;
+        int id = 0;
+        String title = " ";
+        int year = 0;
         boolean loaned = false;
-        String author = "E L James";
-        int pages = 340;
+        String author = " ";
+        int pages = 0;
 
         Book book = new Book(id, title, year, loaned, author, pages);
 
-        System.out.println("Vamos adicionar um livro");
+        System.out.println("Quer adicionar um livro? ");
 
         String response = sc.nextLine();
         while(response.equalsIgnoreCase("sim")) {

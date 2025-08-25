@@ -15,6 +15,10 @@ public class LibraryItems {
     }
 
     public void showInfo() {
+        System.out.println(items);
+        for (int i = 0; i < items.size(); i++){
+            System.out.println(items.get(i));
+        }
         for(Item item : items) {
             System.out.println(item);
         }
