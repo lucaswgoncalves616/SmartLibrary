@@ -3,7 +3,7 @@ import library.model.*;
 
 import java.util.Scanner;
 
-import static library.model.Book.registerNewBook;
+import static library.model.Book.createNewBook;
 
 public class Main {
 
@@ -12,7 +12,7 @@ public class Main {
 
         LibraryItems library = new LibraryItems();
 
-        library.registerNewItem(registerNewBook());
+        library.registerNewItem(createNewBook());
         library.showInfo();
 
     }

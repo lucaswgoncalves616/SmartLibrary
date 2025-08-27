@@ -24,7 +24,7 @@ public class Book extends Item{
         return this.pages;
     }
 
-    public static Book registerNewBook() {
+    public static Book createNewBook() {
         Scanner sc = new Scanner(System.in);
 
         int id = 0;
@@ -34,36 +34,31 @@ public class Book extends Item{
         String author = " ";
         int pages = 0;
 
-        Book book = new Book(id, title, year, loaned, author, pages);
-
         System.out.println("Quer adicionar um livro? ");
 
         String response = sc.nextLine();
         while(response.equalsIgnoreCase("sim")) {
-            book.id++;
+            id++;
 
             System.out.println("Digite o nome do livro: ");
-            book.title = sc.nextLine();
+            title = sc.nextLine();
 
             System.out.println("Digite o ano do livro: ");
-            book.year = sc.nextInt();
+            year = sc.nextInt();
             sc.nextLine();
-
-            book.loaned = false;
 
             System.out.println("Digite o autor do livro: ");
-            book.author = sc.nextLine();
+            author = sc.nextLine();
 
             System.out.println("Quantas páginas tem o livro? ");
-            book.pages = sc.nextInt();
+            pages = sc.nextInt();
             sc.nextLine();
-
-            //book = new Book(id, title, year, loaned, author, pages);
 
             System.out.println("Deseja adicionar outro livro? ");
             response = sc.nextLine();
         }
-        return book;
+        return new Book(id, title, year, loaned, author, pages);
     }
+
 
 }

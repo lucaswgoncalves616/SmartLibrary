@@ -3,7 +3,7 @@ package library.model;
 import java.util.ArrayList;
 
 public class LibraryItems {
-    private ArrayList<Item> items = new ArrayList<Item>();
+    private final ArrayList<Item> items = new ArrayList<Item>();
     private int numOfItems;
 
     public LibraryItems() {
