@@ -13,6 +13,8 @@ public abstract class Item {
         this.loaned = loaned;
     }
 
+    public abstract Item newBook(String title, int year, String author, int pages);
+
     public int getId() {
         return id;
     }
@@ -45,7 +47,7 @@ public abstract class Item {
         this.loaned = loaned;
     }
 
-    public String mostrarInfo(String id) {
+    public String mostrarInfo() {
         return "Item: " + this.title +
                 "\nAno: " + this.year +
                 "\nStatus: " + (loaned ? "\nEmprestado" : "Não emprestado");

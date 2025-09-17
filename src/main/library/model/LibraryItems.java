@@ -9,7 +9,8 @@ public class LibraryItems {
         itemList.add(item);
     }
 
-    public static String showItems() {
-        return itemList.toString();
+    public static ArrayList<Item> getItemList() {
+        return itemList;
     }
+
 }
